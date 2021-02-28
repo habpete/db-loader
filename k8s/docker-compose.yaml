@@ -1,0 +1,23 @@
+version: '3'
+services:
+  master:
+    image: "postgres"
+    container_name: "master"
+    env_file:
+      - database.env
+    volumes:
+      - master:/var/lib/postgresql/data/
+    ports:
+      - 5432
+  slave:
+    image: "postgres"
+    container_name: "slave"
+    env_file:
+      - database.env
+    volumes:
+      - slave:/var/lib/postgresql/data/
+    ports:
+      - 6432
+volumes:
+  master:
+  slave:
