@@ -1,3 +1,7 @@
 package writer
 
-type IWriter interface{}
+import "db-loader/decls"
+
+type IWriter interface {
+	Write(inData *decls.Incident) error
+}

@@ -1,12 +1,24 @@
 package handlers
 
-import "net/http"
+import (
+	"db-loader/writer"
+	"net/http"
+)
 
-func Writer(w http.ResponseWriter, r *http.Request) {}
+type HandlersState struct {
+	wr writer.IWriter
+}
 
-func Reader(w http.ResponseWriter, r *http.Request) {}
+func (this *HandlersState) Writer(w http.ResponseWriter, r *http.Request) {
+	this.wr.Write(nil)
+}
 
-func IniterHandlers() {
-	http.HandleFunc("/", Reader)
-	http.HandleFunc("/write", Writer)
+func (this *HandlersState) Reader(w http.ResponseWriter, r *http.Request) {}
+
+func IniterHandlers(wr writer.IWriter) {
+	hs := &HandlersState{
+		wr: wr,
+	}
+	http.HandleFunc("/", hs.Reader)
+	http.HandleFunc("/write", hs.Writer)
 }
