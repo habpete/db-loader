@@ -1,8 +1,6 @@
 syntax = "proto3";
 
-package proto;
-
-import "google/protobuf/timestamp.proto";
+package insertInfo;
 
 message insert_info {
     int64 id = 1;

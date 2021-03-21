@@ -1,13 +1,11 @@
 syntax = "proto3";
 
-package proto;
-
-import "google/protobuf/timestamp.proto";
+package dbInfo;
 
 message db_info {
     string host = 1;
     string database = 2;
-    int port = 3;
+    int32 port = 3;
     string username = 4;
     string password = 5;
 }
