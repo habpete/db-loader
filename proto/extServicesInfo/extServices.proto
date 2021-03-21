@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+package extServicesInfo;
+
+message external_service {
+    string service_name = 1;
+    string service_host_name = 2;
+}

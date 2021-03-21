@@ -1,0 +1,3 @@
+package score
+
+func Get() {}
