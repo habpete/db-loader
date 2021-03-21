@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+package insertInfo;
+
+message insert_info {
+    int64 id = 1;
+    string name = 2;
+}

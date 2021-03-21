@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+package selectInfo;
+
+message select_info {}
+
+message select_result {}
