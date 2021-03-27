@@ -1,3 +1,7 @@
 package score
 
-func Get() {}
+type ScoreService struct {
+	serviceName string
+}
+
+func (ss *ScoreService) Get() {}

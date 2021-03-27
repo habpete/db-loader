@@ -1,3 +1,7 @@
 package profile
 
-func Get() {}
+type ProfileService struct {
+	serviceName string
+}
+
+func (ps *ProfileService) Get() {}

@@ -1,3 +1,5 @@
 package review
 
-func Get() {}
+type ReviewService struct{}
+
+func (rs *ReviewService) Get() {}
